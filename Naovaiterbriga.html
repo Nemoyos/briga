@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Não Vai ter Briga porra</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .painel {
+            margin: auto;
+            width: 700px;
+            height: 700px;
+            background-color: aquamarine;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #sim {
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: black;
+            border: 2px solid grey;
+            border-radius: 10px;
+            color: white;
+
+        }
+
+        #nao {
+            height: 40px;
+            width: 60px;
+            background-color: black;
+            border: 2px solid grey;
+            border-radius: 10px;
+            color: white;
+            margin-left: 70px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="painel">
+
+        <img src="https://i.redd.it/t3i11lqbucda1.gif" alt="">
+        <h1>Vai ter briga hoje?</h1>
+        <a  href="https://www.youtube.com/shorts/KUhj39kq82k" ><button onmouseover="fuja()" id="sim"> Sim! </button></a>
+        <a  href="https://www.youtube.com/watch?v=I8isgrpa7mc" ><button id="nao"> Não! </button></a>
+
+    </div>
+
+    <script>
+
+        function fuja(){
+            var _cSim = document.getElementById("sim")
+            
+            var _cLarg = window.innerWidth;
+            var _cAlt = window.innerHeight;
+
+            var _cMaxX = _cLarg - _cSim.offsetWidth;
+            var _cMaxY = _cAlt - _cSim.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * _cMaxX);
+            var aleatorioY = Math.floor(Math.random() * _cMaxY);
+
+            _cSim.style.left = aleatorioX + "px";
+            _cSim.style.top = aleatorioY + "px";
+
+
+        }
+
+
+    </script>
+</body>
+
+
+</html>
